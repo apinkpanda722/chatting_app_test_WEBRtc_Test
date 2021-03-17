@@ -4,13 +4,14 @@ const { v4: uuidV4 } = require('uuid');
 
 const fs = require('fs');
 const https = require('https');
+const keyFilePath = path.resolve('/bin', './privkey.pem');
+const certFilePath = path.resolve('/bin', './cert.pem');
+const caFilePath = path.resolve('/bin', './chain.pem');
 const server = https.createServer(
   {
-    key: fs.readFileSync(
-      '/etc/letsencrypt/live/www.shadow-fit.com/privkey.pem'
-    ),
-    cert: fs.readFileSync('/etc/letsencrypt/live/www.shadow-fit.com/cert.pem'),
-    ca: fs.readFileSync('/etc/letsencrypt/live/www.shadow-fit.com/chain.pem'),
+    key: fs.readFileSync(keyFilePath),
+    cert: fs.readFileSync(certFilePath),
+    ca: fs.readFileSync(caFilePath),
     requestCert: false,
     rejectUnauthorized: false,
   },
