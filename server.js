@@ -4,6 +4,7 @@ const { v4: uuidV4 } = require('uuid');
 
 const fs = require('fs');
 const https = require('https');
+const path = require('path');
 const keyFilePath = path.resolve('/bin', './privkey.pem');
 const certFilePath = path.resolve('/bin', './cert.pem');
 const caFilePath = path.resolve('/bin', './chain.pem');
