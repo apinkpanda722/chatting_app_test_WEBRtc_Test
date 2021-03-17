@@ -5,9 +5,18 @@ const { v4: uuidV4 } = require('uuid');
 const fs = require('fs');
 const https = require('https');
 const path = require('path');
-const keyFilePath = path.resolve('/bin', './privkey.pem');
-const certFilePath = path.resolve('/bin', './cert.pem');
-const caFilePath = path.resolve('/bin', './chain.pem');
+const keyFilePath = path.resolve(
+  '/home/ubuntu/chatting_app_test_WEBRtc_Test/bin',
+  './privkey.pem'
+);
+const certFilePath = path.resolve(
+  '/home/ubuntu/chatting_app_test_WEBRtc_Test/bin',
+  './cert.pem'
+);
+const caFilePath = path.resolve(
+  '/home/ubuntu/chatting_app_test_WEBRtc_Test/bin',
+  './chain.pem'
+);
 const server = https.createServer(
   {
     key: fs.readFileSync(keyFilePath),
