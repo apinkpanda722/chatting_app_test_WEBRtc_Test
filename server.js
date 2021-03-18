@@ -6,16 +6,16 @@ const fs = require('fs');
 const https = require('https');
 const path = require('path');
 const keyFilePath = path.resolve(
-  '/home/ubuntu/chatting_app_test_WEBRtc_Test/bin',
+  '/etc/letsencrypt/live/shadow-fit.com',
   './privkey.pem'
 );
 const certFilePath = path.resolve(
-  '/home/ubuntu/chatting_app_test_WEBRtc_Test/bin',
+  '/etc/letsencrypt/live/shadow-fit.com',
   './cert.pem'
 );
 const caFilePath = path.resolve(
-  '/home/ubuntu/chatting_app_test_WEBRtc_Test/bin',
-  './chain.pem'
+  '/etc/letsencrypt/live/shadow-fit.com',
+  './fullchain.pem'
 );
 const server = https.createServer(
   {
