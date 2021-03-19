@@ -6,15 +6,15 @@ const fs = require('fs');
 const https = require('https');
 const path = require('path');
 const keyFilePath = path.resolve(
-  '/etc/letsencrypt/live/shadow-fit.com',
+  '/etc/letsencrypt/live/www.shadow-fit.com',
   './privkey.pem'
 );
 const certFilePath = path.resolve(
-  '/etc/letsencrypt/live/shadow-fit.com',
+  '/etc/letsencrypt/live/www.shadow-fit.com',
   './cert.pem'
 );
 const caFilePath = path.resolve(
-  '/etc/letsencrypt/live/shadow-fit.com',
+  '/etc/letsencrypt/live/www.shadow-fit.com',
   './fullchain.pem'
 );
 const server = https.createServer(
